@@ -11,10 +11,7 @@ const enquiryRoutes = require('./routes/enquiryRoutes');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://ak-oka0.onrender.com',
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
